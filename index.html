@@ -1,82 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image to WEBP Converter</title>
-
-  <link href="styles.css" rel="stylesheet" />
+  <!-- Add Cropperjs for image cropping -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
 </head>
-
 <body>
-  <div class="container fade-in">
-    <h1>Image to WEBP Converter</h1>
-    <div class="input-section">
-      <div class="file-input-container">
-        <label class="file-input-label" for="upload">
-          <span>Choose a JPG or PNG file</span>
-        </label>
-        <input accept="image/jpeg, image/png" class="file-input" id="upload" type="file" />
-      </div>
-      <div class="file-info" id="file-details" style="display: none;">
-        <span class="file-name" id="file-name">No file selected</span>
-        <span class="file-size" id="file-size"></span>
-      </div>
-      <div class="button-group">
-        <button class="btn convert-btn" onclick="convertToWebP()">Convert to WEBP</button>
-      </div>
-      <div class="progress-container" id="progress-container" style="display: none;">
-        <div class="progress-bar" id="progress-bar"></div>
-      </div>
-    </div>
-  </div>
-  <div class="output-container fade-in" id="output-container" style="display: none;">
-    <h3>Results</h3>
-    <!-- WebP image preview -->
-    <div class="preview-section">
-      <div class="preview-box">
-        <div class="preview-title">
-          <span>WEBP Image Preview</span>
-          <span class="dimension-label" id="webp-dimensions"></span>
-        </div>
-        <div class="preview-frame">
-          <img alt="WEBP image preview" id="webp-preview" src="" />
-        </div>
-      </div>
-    </div>
-    <div class="stats-container">
-      <div class="stat-card">
-        <div class="stat-title">Original Size</div>
-        <div class="stat-value" id="original-size">0 KB</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">WEBP Size</div>
-        <div class="stat-value" id="webp-size">0 KB</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Savings</div>
-        <div class="stat-value" id="savings-size">0 KB</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Reduction</div>
-        <div class="stat-value" id="savings-percent">0%</div>
-      </div>
-    </div>
-    <div class="button-group" style="margin-top: 1.5rem;">
-      <button class="btn download-btn" id="download-btn" onclick="downloadWebP()">Download WEBP</button>
-    </div>
-    <h3 style="margin-top: 2rem;">Data URL</h3>
-    <div class="code-box">
-      <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
-      <pre id="output">No data yet. Click Convert to generate the WEBP data URL.</pre>
-      <span class="success-message" id="success-message">Copied to clipboard!</span>
-    </div>
-  </div>
-  <footer>
-    Convert your images to WEBP format for better web performance and smaller file sizes
-  </footer>
-
-  <script src="main.js"></script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
 </body>
-
 </html>

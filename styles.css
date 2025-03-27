@@ -1,4 +1,3 @@
-
     :root {
       --bg-primary: #1f2428;
       --bg-secondary: #292d35;
@@ -377,5 +376,71 @@
     .dimension-label {
       font-size: 0.8rem;
       color: var(--text-secondary);
+    }
+    
+    /* Cropper component styles */
+    .cropper-container {
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      background-color: var(--bg-tertiary);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    
+    .cropper-wrapper {
+      max-width: 100%;
+      height: 400px;
+      background-color: var(--bg-primary);
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    
+    .crop-btn {
+      background-color: var(--success);
+      color: var(--bg-primary);
+    }
+    
+    .crop-btn:hover {
+      background-color: var(--success-dark);
+      transform: translateY(-2px);
+    }
+    
+    .cancel-btn {
+      background-color: var(--error);
+      color: var(--text-primary);
+    }
+    
+    .cancel-btn:hover {
+      background-color: #e05a70;
+      transform: translateY(-2px);
+    }
+    
+    /* Cropper.js custom styles */
+    .cropper-view-box {
+      outline: 1px solid var(--accent);
+      outline-color: var(--accent);
+    }
+    
+    .cropper-line {
+      background-color: var(--accent);
+    }
+    
+    .cropper-point {
+      background-color: var(--accent);
+      width: 8px;
+      height: 8px;
+    }
+    
+    .cropper-center {
+      width: 8px;
+      height: 8px;
+      opacity: 0.8;
+      background-color: var(--accent);
+    }
+    
+    .cropper-face {
+      background-color: var(--accent);
+      opacity: 0.1;
     }
   
